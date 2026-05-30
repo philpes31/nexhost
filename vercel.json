@@ -1,3 +1,11 @@
-git add vercel.json
-git commit -m "corrige vercel.json"
-git push
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "framework": "vite",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
